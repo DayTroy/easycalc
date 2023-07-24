@@ -46,6 +46,14 @@ body {
   border-radius: 1rem;
 }
 
+.calculator-grid > button:nth-child(2) {
+  background-color: #cf2929;
+}
+
+.calculator-grid > button:nth-child(3) {
+  background-color: #ce742f;
+}
+
 .calculator-grid > button:focus {
   transition: 0.5s;
   background-color: #000;
