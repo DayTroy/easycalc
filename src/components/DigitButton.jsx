@@ -1,5 +1,5 @@
 import React from "react";
-import { ACTIONS } from "../App";
+import ACTIONS from "../utils/ACTIONS.JS";
 
 export default function DigitButton({ dispatch, digit }) {
   return (
