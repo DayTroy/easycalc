@@ -15,3 +15,5 @@ npm run dev
 • React: A popular JavaScript library for building user interfaces. It allows for efficient component-based development and provides a declarative approach to building UIs.
 
 • Vite: A fast and minimalist build tool for modern web development. It offers a lightning-fast dev server, instant hot module replacement (HMR), and optimized production builds.
+
+• Netlify: A fully-integrated platform for frontend developers to deploy and scale modern web applications.
