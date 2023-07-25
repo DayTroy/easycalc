@@ -47,7 +47,6 @@ body {
   border-radius: 1rem;
   cursor: pointer;
   box-shadow: 4px 4px 0 0 #fff;
-  transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
 .calculator-grid > button:nth-child(2) {

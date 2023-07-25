@@ -1,12 +1,17 @@
 import ACTIONS from "../utils/ACTIONS";
+import { useButtonStyle } from "../hooks/useButtonStyle";
 
 const ClearButton = ({ dispatch, value }) => {
+  const { buttonStyle, setStyle } = useButtonStyle();
   const handleClick = () => {
     dispatch({ type: ACTIONS.CLEAR });
-    window.location.reload();
+    setStyle();
+    setTimeout(() => {
+      window.location.reload();
+    }, 200);
   };
   return (
-    <button className="span-two" onClick={handleClick}>
+    <button style={buttonStyle} className="span-two" onClick={handleClick}>
       {value}
     </button>
   );

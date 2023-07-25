@@ -1,5 +1,5 @@
 import formatOperand from "../utils/formatOperand";
-const Output = ({previousOperand, operation, currentOperand}) => {
+const Output = ({ previousOperand, operation, currentOperand }) => {
   return (
     <div className="output">
       <div className="previous-operand">

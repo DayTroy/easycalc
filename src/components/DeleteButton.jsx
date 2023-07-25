@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import ACTIONS from "../utils/ACTIONS";
+import { useButtonStyle } from "../hooks/useButtonStyle";
 
 const DeleteButton = ({ dispatch, value }) => {
+  const {buttonStyle, setStyle} = useButtonStyle();
   const handleClick = () => {
     dispatch({ type: ACTIONS.DELETE_DIGIT })
+    setStyle()
   };
   const handleKeyDown = (event) => {
     if (event.key === "Backspace") {
@@ -13,7 +16,7 @@ const DeleteButton = ({ dispatch, value }) => {
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
   }, []);
-  return <button onClick={handleClick}>{value}</button>;
+  return <button style={buttonStyle} onClick={handleClick}>{value}</button>;
 };
 
 export default DeleteButton;
