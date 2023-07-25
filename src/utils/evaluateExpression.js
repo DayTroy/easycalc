@@ -13,7 +13,7 @@ function evaluateExpression({ currentOperand, previousOperand, operation }) {
     case "*":
       computation = previous * current;
       break;
-    case "÷":
+    case "/":
       computation = previous / current;
       break;
   }

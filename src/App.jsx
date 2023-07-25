@@ -2,35 +2,28 @@ import { useReducer } from "react";
 import DigitButton from "./components/DigitButton";
 import OperationButton from "./components/OperationButton";
 import "./App.css";
-import ACTIONS from "./utils/ACTIONS.JS";
-import formatOperand from "./utils/formatOperand";
 import reducer from "./utils/calcReducer";
+import Output from "./components/Output";
+import ClearButton from "./components/ClearButton";
+import DeleteButton from "./components/DeleteButton";
+import EvaluateButton from "./components/EvaluateButton";
 
 function App() {
   const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
     reducer,
     {}
   );
-
   return (
     <div className="calculator-wrapper">
       <div className="calculator-grid">
-        <div className="output">
-          <div className="previous-operand">
-            {formatOperand(previousOperand)} {operation}
-          </div>
-          <div className="current-operand">{formatOperand(currentOperand)}</div>
-        </div>
-        <button
-          className="span-two"
-          onClick={() => dispatch({ type: ACTIONS.CLEAR })}
-        >
-          AC
-        </button>
-        <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>
-          DEL
-        </button>
-        <OperationButton operation="÷" dispatch={dispatch} />
+        <Output
+          currentOperand={currentOperand}
+          previousOperand={previousOperand}
+          operation={operation}
+        />
+        <ClearButton value="AC" dispatch={dispatch} />
+        <DeleteButton value="DEL" dispatch={dispatch} />
+        <OperationButton operation="/" dispatch={dispatch} />
         <DigitButton digit="1" dispatch={dispatch} />
         <DigitButton digit="2" dispatch={dispatch} />
         <DigitButton digit="3" dispatch={dispatch} />
@@ -45,12 +38,7 @@ function App() {
         <OperationButton operation="-" dispatch={dispatch} />
         <DigitButton digit="." dispatch={dispatch} />
         <DigitButton digit="0" dispatch={dispatch} />
-        <button
-          className="span-two"
-          onClick={() => dispatch({ type: ACTIONS.EVALUATE })}
-        >
-          =
-        </button>
+        <EvaluateButton value="=" dispatch={dispatch} />
       </div>
     </div>
   );
