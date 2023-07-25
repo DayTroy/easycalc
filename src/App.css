@@ -86,20 +86,17 @@ body {
   font-size: 2.5rem;
 }
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 570px) {
   .calculator-grid {
-    grid-template-columns: repeat(4, 3rem);
-    grid-template-rows: minmax(6rem, auto) repeat(5, 3rem);
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: minmax(6rem, auto) repeat(5, 4rem);
   }
   .calculator-wrapper {
-    width: 20rem;
-    padding: 2rem 1.8rem;
+    width: 25rem;
+    padding: 2rem 2rem;
   }
   .calculator-grid > button {
     font-size: 1.3rem;
-  }
-  .calculator-grid > button:focus {
-    box-shadow: 0.3rem 0.3rem 0 0 #fff;
   }
   .output .previous-operand {
     font-size: 1rem;
@@ -109,24 +106,36 @@ body {
   }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 490px) {
   .calculator-grid {
-    grid-template-columns: repeat(4, 2rem);
-    grid-template-rows: minmax(6rem, auto) repeat(5, 2rem);
+    grid-template-columns: repeat(4, 3rem);
+    grid-template-rows: minmax(5rem, auto) repeat(5, 3rem);
     gap: 1rem;
   }
   .calculator-wrapper {
-    width: 14rem;
-    padding: 1.5rem;
+    width: 19rem;
+    padding: 1.5rem 2rem;
   }
   .calculator-grid > button {
     font-size: 0.8rem;
-    border-radius: 0.3rem;
+    border-radius: 0.5rem;
   }
   .output .previous-operand {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .output .current-operand {
     font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .calculator-grid {
+    grid-template-columns: repeat(4, 2rem);
+    grid-template-rows: minmax(4rem, auto) repeat(5, 2rem);
+    gap: 1rem;
+  }
+  .calculator-wrapper {
+    width: 15rem;
+    padding: 1.5rem 2rem;
   }
 }
